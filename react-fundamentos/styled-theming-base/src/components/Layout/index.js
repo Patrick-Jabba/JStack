@@ -11,7 +11,8 @@ export default function Layout({ onToggleTheme, selectedTheme }) {
       selectedTheme={selectedTheme}
       />
       <PostsList />
-      <Footer onToggleTheme={onToggleTheme}
+      <Footer 
+      onToggleTheme={onToggleTheme}
       selectedTheme={selectedTheme}
       />
     </>
