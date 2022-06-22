@@ -12,17 +12,17 @@
 ### Objeto this, arguments e diferenças entre functions e arrow functions, parâmetros default em funções, Destructuring, Rest Operator, Imutabilidade, Spread Operator, Template Strings, Promises, ESModules, includes, startsWith, endsWith, find, findIndex, some, every, map, filter e reduce.
 
 ## Fundamentos do React ✔️:
-### Entendendo sobre a biblioteca, configuração do <img src='https://img.shields.io/badge/Babel-F9DC3E?style=for-the-badge&logo=babel&logoColor=white' />; 
+### Entendendo sobre a biblioteca do React;
+Configuração do <img src='https://img.shields.io/badge/Babel-F9DC3E?style=for-the-badge&logo=babel&logoColor=white' />; 
+
 Gerando o Bundle com o <img src='https://img.shields.io/badge/Webpack-8DD6F9?style=for-the-badge&logo=Webpack&logoColor=white' />; 
 Config dos Loaders; Servidor local de desenvolvimento; Criação de Componentes; React Fragment;
 Expressões JS no JSX; Props; Prop children; Tipagem de props; Renderização de listas; States; Funcções de Callback via Props; Renderização Condicional; 
 Context API; 
-Inline Styles; CSS modules; <img src='https://img.shields.io/badge/Sass-CC6699?style=for-the-badge&logo=sass&logoColor=white' />; 
-Classes dinâmicas; <img src='https://img.shields.io/badge/styled--components-DB7093?style=for-the-badge&logo=styled-components&logoColor=white' /> 
-Criação e estilização; 
-Props em <img src='https://img.shields.io/badge/styled--components-DB7093?style=for-the-badge&logo=styled-components&logoColor=white' />; 
-Estilos dentro da mesma função; 
-Theming com <img src='https://img.shields.io/badge/styled--components-DB7093?style=for-the-badge&logo=styled-components&logoColor=white' />; 
+Inline Styles; CSS modules; <img src='https://img.shields.io/badge/Sass-CC6699?style=for-the-badge&logo=sass&logoColor=white' />
+
+<img src='https://img.shields.io/badge/styled--components-DB7093?style=for-the-badge&logo=styled-components&logoColor=white' /> : 
+Classes dinâmicas, Criação e estilização, Props, Estilos dentro da mesma função, Theming;
 Troca de temas; useTheme; lifecycle com useEffect; Executando função com dismount de component; useLayoutEffect; Remoção de eventListeners e para a execução do useEffect com useRef;
 
 ## Class Components : em andamento 👷
