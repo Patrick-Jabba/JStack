@@ -25,4 +25,4 @@ Estilos dentro da mesma função;
 Theming com <img src='https://img.shields.io/badge/styled--components-DB7093?style=for-the-badge&logo=styled-components&logoColor=white' />; 
 Troca de temas; useTheme; lifecycle com useEffect; Executando função com dismount de component; useLayoutEffect; Remoção de eventListeners e para a execução do useEffect com useRef;
 
-##Class Components : em andamento 👷
+## Class Components : em andamento 👷
