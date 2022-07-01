@@ -1,24 +1,30 @@
-import React, { Component } from 'react';
+import React, { useContext } from 'react';
 import { ThemeContext } from '../../contexts/ThemeContext';
+import { useHistory } from 'react-router-dom';
 
 import { Container } from './styles';
 
-export default class Header extends Component {
-  render() {
-    return (
-      <ThemeContext.Consumer>
-        {({ selectedTheme, handleToggleTheme}) => (
-          <Container>
-            <h1>Sharpshooter's Blog</h1>
-            <button
-              type='button'
-              onClick={handleToggleTheme}
-            >
-              {selectedTheme === 'dark' ? '🌞' : '🌛'}
-            </button>
-          </Container >
-        )}
-      </ThemeContext.Consumer>
-    );
+export default function Header() {
+  const history = useHistory();
+
+  function handleNavigate(){
+    history.push('/');
   }
+
+  const { theme, handleToggleTheme} = useContext(ThemeContext);
+
+  return (
+    <Container>
+      <h1>Sharpshooter's Blog</h1>
+      <button onClick={handleNavigate} style={{color: '#fff'}}>
+       Voltar para HOME PAGE
+      </button>
+      <button
+        type='button'
+        onClick={handleToggleTheme}
+      >
+        {theme === 'dark' ? '🌞' : '🌛'}
+      </button>
+    </Container >
+  );
 }

@@ -20,12 +20,6 @@ export class ThemeProvider extends React.Component {
     };
   }
 
-  componentDidUpdate(prevProps, prevState){
-    if(prevState.theme !== this.state.theme){
-      console.log('tema mudou...')
-    }
-  }
-
   handleToggleTheme = () => {
     this.setState(prevState => ({
       theme: prevState.theme === 'dark' ? 'light' : 'dark',
@@ -35,7 +29,6 @@ export class ThemeProvider extends React.Component {
   }
 
   render() {
-    console.log('rendered...')
     return (
       <ThemeContext.Provider
         value={{

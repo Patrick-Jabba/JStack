@@ -10,7 +10,7 @@ import themes from '../styles/themes';
 //useEffect(() => {}, []);
 
 class App extends React.Component {
-  
+
   render() {
     console.log('rendered');
 

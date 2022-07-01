@@ -1,12 +1,37 @@
-import React, { useMemo } from 'react';
-import { useParams, useLocation } from 'react-router-dom';
+import React from 'react';
+export default class Post extends React.Component {
+  constructor(props) {
+    super(props);
 
-export default function Post() {
-  const params = useParams();
-  const { search } = useLocation();
-  const queryParams = useMemo(() => new URLSearchParams(search), [search]);
+    const { search } = this.props.location;
+    this.queryParams = new URLSearchParams(search);
+  }
 
-  console.log(queryParams.get('meuQueryParam'));
+  handleNavigate = () => {
+    this.props.history.push('/posts')
+  };
 
-  return <h1>Post Page </h1>
+  render() {
+    return (
+      <>
+        <button
+          onClick={this.handleNavigate}>
+          Voltar para a lista de Posts
+        </button>
+        <h1>Post page</h1>
+      </>
+
+    )
+  }
 }
+
+
+// export default function Post() {
+//   const params = useParams();
+//   const { search } = useLocation();
+//   const queryParams = useMemo(() => new URLSearchParams(search), [search]);
+
+//   console.log(queryParams.get('meuQueryParam'));
+
+//   return <h1>Post Page </h1>
+// }

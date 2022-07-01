@@ -8,8 +8,7 @@ import { Routes } from '../../Routes';
 
 import {Nav} from './styles';
 
-export default class Layout extends React.Component {  
-  render() {
+export default function Layout() {  
     return (
       <BrowserRouter>
         <Header />
@@ -22,5 +21,4 @@ export default class Layout extends React.Component {
         <Footer />
       </BrowserRouter>
     )
-  }
 }
