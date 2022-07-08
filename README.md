@@ -5,7 +5,7 @@
 ## Projeto First API ✔️ :
 ### Nesse módulo aprende-se como o Node.js funciona por baixo dos panos (callstack, event-loop e afins), além de falarmos sobre o protocolo HTTP e construirmos uma API REST utilizando apenas os módulos nativos do próprio Node com zero dependências por enquanto.
 
-## Node.js com Express ✔️:
+## Projeto MyContacts back-end -> utilizando Node.js com Express ✔️:
 ### Criação de um servidor http com Express para uma lista de Contatos usando o Nodemon, entendendo npm scripts, controllers, repositories patterns, rotas, middlewares, CRUD, instação e comandos básicos do <img src='https://img.shields.io/badge/Docker-2CA5E0?style=for-the-badge&logo=docker&logoColor=white' />, preparação e ligação do Node com o banco de dados, refatoração dos métodos, criação de novos módulos para nova entidade, SQL JOINS e captura e tratamento de erros.
 
 ## JavaScript Moderno ✔️:
@@ -32,4 +32,13 @@
 ### componentDidMount, DidUpdate, DidCatch, shouldComponentUpdate, componentWillUnmount;
 ### ThemeProvider como Class Component
 
-## React Router v5 e v6 : em andamento 👷‍♂️
+## React Router (v5 ✔️) e (v6 em andamento): 
+### Prop exact e Link;
+### Pagina de erro 404 e Switch;
+### Params e query params nas rotas;
+### Params e query params em Class Components;
+### Navegação programática;
+
+## Projeto MyContacts front-end -> utilizando React ✔️:
+### Componente Header, PageHeader, ContactForm, FormGroup, Input, Select, Modal;
+### Contact Form contem o FormGroup que por sua vez recebe via children o seu componente a ser renderizado podendo assim usarmos o componente Input ou Select dentro dele ou um eventual novo componente;
