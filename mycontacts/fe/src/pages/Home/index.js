@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import { Link } from 'react-router-dom';
 import {
   Card, Container, Header, InputSearchContainer, ListContainer,
@@ -7,10 +7,26 @@ import {
 import arrow from '../../assets/images/icons/arrow.svg';
 import edit from '../../assets/images/icons/edit.svg';
 import trash from '../../assets/images/icons/trash.svg';
+
 // import Modal from '../../components/Modal';
 // import Loader from '../../components/Loader';
 
 export default function Home() {
+  const [contacts, setContacts] = useState([]);
+
+  useEffect(() => {
+    fetch('http://localhost:3001/contacts')
+      .then(async (response) => {
+        const json = await response.json();
+        setContacts(json);
+      })
+      .catch((error) => {
+        console.log('erro', error);
+      });
+  }, []);
+
+  console.log(contacts);
+
   return (
     <Container>
       <InputSearchContainer>
@@ -55,11 +71,3 @@ export default function Home() {
     </Container>
   );
 }
-
-fetch('http://localhost:3000')
-  .then((response) => {
-    console.log('response', response);
-  })
-  .catch((error) => {
-    console.log('erro', error);
-  });
