@@ -7,12 +7,12 @@ import {
 import arrow from '../../assets/images/icons/arrow.svg';
 import edit from '../../assets/images/icons/edit.svg';
 import trash from '../../assets/images/icons/trash.svg';
-import Modal from '../../components/Modal';
+// import Modal from '../../components/Modal';
+// import Loader from '../../components/Loader';
 
 export default function Home() {
   return (
     <Container>
-      <Modal />
       <InputSearchContainer>
         <input
           type="text"
@@ -55,3 +55,11 @@ export default function Home() {
     </Container>
   );
 }
+
+fetch('http://localhost:3000')
+  .then((response) => {
+    console.log('response', response);
+  })
+  .catch((error) => {
+    console.log('erro', error);
+  });
