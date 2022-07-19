@@ -31,14 +31,12 @@ class CategoryController {
     }
 
     const category = await CategoriesRepository.create({ name });
-    response.json(category);
+    response.status(201).json(category);
   }
 
   async update(request, response) {
     const { id } = request.params;
     const { name } = request.body;
-
-    const categoryExists = await CategoriesRepository.findById(id);
 
     if (!name) {
       return response.status(400).json({ error: 'Name is required.' })
