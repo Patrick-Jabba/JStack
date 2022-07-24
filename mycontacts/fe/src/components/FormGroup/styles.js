@@ -61,8 +61,9 @@ export const Container = styled.div`
 
   .form-item{
     position: relative;
+    
     .loader {
-      color: ${({ theme }) => theme.colors.primary.main};
+    color: ${({ theme }) => theme.colors.primary.main};
     font-size: 16px;
     width: 1em;
     height: 1em;
