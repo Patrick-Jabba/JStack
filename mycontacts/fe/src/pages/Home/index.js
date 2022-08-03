@@ -9,6 +9,7 @@ import edit from '../../assets/images/icons/edit.svg';
 import trash from '../../assets/images/icons/trash.svg';
 
 import ContactsService from '../../services/ContactsService';
+// import APIError from '../../errors/APIError';
 
 // import Modal from '../../components/Modal';
 import Loader from '../../components/Loader';
@@ -32,7 +33,10 @@ export default function Home() {
 
         setContacts(contactsList);
       } catch (error) {
-        console.log('error', error);
+        console.log('Name: ', error.name);
+        console.log('Name: ', error.message);
+        console.log('Response: ', error.response);
+        console.log(error);
       } finally {
         setIsLoading(false);
       }
