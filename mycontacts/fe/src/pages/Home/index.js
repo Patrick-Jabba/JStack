@@ -10,11 +10,11 @@ import trash from '../../assets/images/icons/trash.svg';
 import sad from '../../assets/images/sad.svg';
 
 import Button from '../../components/Button';
-import ContactsService from '../../services/ContactsService';
-// import APIError from '../../errors/APIError';
-
-// import Modal from '../../components/Modal';
 import Loader from '../../components/Loader';
+
+import services from '../../services';
+
+import delay from '../../utils/delay';
 
 export default function Home() {
   const [contacts, setContacts] = useState([]);
@@ -30,10 +30,10 @@ export default function Home() {
   async function loadContacts() {
     try {
       setIsLoading(true);
+      await delay(2500);
+      const { data } = await services.contacts.listContacts(orderBy);
 
-      const contactsList = await ContactsService.listContacts(orderBy);
-
-      setContacts(contactsList);
+      setContacts(data);
       setHasError(false);
     } catch {
       setHasError(true);

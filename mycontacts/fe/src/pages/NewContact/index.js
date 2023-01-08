@@ -1,7 +1,7 @@
 import React from 'react';
 import PageHeader from '../../components/PageHeader';
 import ContactForm from '../../components/ContactForm';
-import ContactsService from '../../services/ContactsService';
+import services from '../../services';
 
 export default function NewContact() {
   async function handleSubmit(formData) {
@@ -12,9 +12,9 @@ export default function NewContact() {
         phone: formData.phone,
         category_id: formData.categoryId,
       };
-      const response = await ContactsService.createContact(contact);
+      const { data } = await services.contacts.createContact(contact);
 
-      console.log(response);
+      console.log(data);
     } catch {
       alert('Ocorreu um erro ao cadastrar o contato!');
     }

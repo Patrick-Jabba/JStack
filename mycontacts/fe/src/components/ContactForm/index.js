@@ -4,7 +4,8 @@ import { useState, useEffect } from 'react';
 import isEmailValid from '../../utils/isEmailValid';
 import formatPhone from '../../utils/formatPhone';
 import useErrors from '../../hooks/useErrors';
-import CategoriesService from '../../services/CategoriesService';
+import delay from '../../utils/delay';
+import services from '../../services';
 
 import { ButtonContainer, Form } from './styles';
 
@@ -36,9 +37,10 @@ export default function ContactForm({ buttonLabel, onSubmit }) {
   useEffect(() => {
     async function loadCategories() {
       try {
-        const categoriesList = await CategoriesService.listCategories();
+        await delay(2500);
+        const { data } = await services.categories.listCategories();
 
-        setCategories(categoriesList);
+        setCategories(data);
       } catch { } finally {
         setIsLoadingCategories(false);
       }
